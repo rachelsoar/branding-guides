@@ -12,6 +12,7 @@
   --wai-violet: #8100ff;
   --wai-dark: #01081b;
   --cp-teal: #1D9E75;
+  --cp-maroon: #78002d;
   --cp-dark: #04342C;
   --gray-50: #fafaf8;
   --gray-100: #f0efec;
@@ -48,6 +49,10 @@ h1 { font-size: 36px; margin-bottom: 8px; }
 h2 { font-size: 24px; margin: 48px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--gray-200); }
 h3 { font-size: 18px; margin: 32px 0 12px; font-weight: 600; }
 p { margin-bottom: 16px; color: var(--gray-800); }
+
+/* Section spacing */
+section { margin-bottom: 48px; padding-bottom: 16px; }
+section + section { margin-top: 16px; }
 a { color: var(--soar-coral); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
@@ -116,8 +121,8 @@ a:hover { text-decoration: underline; }
 .card--soar:hover { border-color: var(--soar-coral); }
 .card--wai .card-eyebrow { color: var(--wai-violet); }
 .card--wai:hover { border-color: var(--wai-violet); }
-.card--cp .card-eyebrow { color: var(--cp-teal); }
-.card--cp:hover { border-color: var(--cp-teal); }
+.card--cp .card-eyebrow { color: var(--cp-maroon); }
+.card--cp:hover { border-color: var(--cp-maroon); }
 .card--guide .card-eyebrow { color: var(--gray-600); }
 .card--guide:hover { border-color: var(--gray-800); }
 
@@ -129,8 +134,8 @@ a:hover { text-decoration: underline; }
   font-family: 'Outfit', sans-serif;
   font-size: 12px;
   font-weight: 500;
-  color: var(--cp-teal);
-  background: #e1f5ee;
+  color: var(--gray-600);
+  background: var(--gray-100);
   padding: 3px 10px;
   border-radius: 20px;
   margin-left: 8px;
@@ -138,13 +143,7 @@ a:hover { text-decoration: underline; }
 }
 .updated-badge .material-symbols-outlined { font-size: 14px; }
 
-/* Section with data-updated */
-section[data-updated].recently-updated {
-  background: linear-gradient(90deg, #e1f5ee22 0%, transparent 60%);
-  border-left: 3px solid var(--cp-teal);
-  padding-left: 20px;
-  margin-left: -23px;
-}
+/* Section with data-updated — badge only, no border */
 
 /* Tables */
 table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
@@ -273,28 +272,6 @@ tr:last-child td { border-bottom: none; }
   text-decoration: none;
   border-bottom-color: var(--soar-coral);
 }
-.toc-controls {
-  display: flex;
-  gap: 8px;
-  margin-top: 12px;
-  padding-top: 10px;
-  border-top: 1px solid var(--gray-100);
-}
-.toc-controls button {
-  font-family: 'Outfit', sans-serif;
-  font-size: 12px;
-  padding: 4px 12px;
-  border-radius: 20px;
-  border: 1px solid var(--gray-200);
-  background: #fff;
-  color: var(--gray-600);
-  cursor: pointer;
-}
-.toc-controls button:hover {
-  border-color: var(--gray-400);
-  color: var(--gray-800);
-}
-
 /* ── COLLAPSIBLE SECTIONS ── */
 section.collapsible > *:not(h2) {
   max-height: 0;
@@ -406,7 +383,11 @@ section.collapsible h2:hover .section-toggle {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
+}
+.section-label + h2 {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* Featured callout box — for key brand info */
