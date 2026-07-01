@@ -216,3 +216,302 @@ tr:last-child td { border-bottom: none; }
   .card-grid { grid-template-columns: 1fr; }
   .swatch-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+
+/* ── BACK BUTTON ── */
+.back-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  margin-bottom: 24px;
+  background: var(--gray-50);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--gray-100);
+  font-size: 14px;
+  color: var(--gray-600);
+}
+.back-bar a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--gray-800);
+  font-weight: 500;
+}
+.back-bar a:hover { color: var(--soar-coral); text-decoration: none; }
+
+/* ── PAGE INDEX / TOC ── */
+#page-index {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 40px;
+}
+#page-index .toc-label {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 12px;
+}
+.toc-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+}
+.toc-link {
+  font-size: 14px;
+  color: var(--gray-800);
+  padding: 4px 0;
+  border-bottom: 1px solid transparent;
+}
+.toc-link:hover {
+  color: var(--soar-coral);
+  text-decoration: none;
+  border-bottom-color: var(--soar-coral);
+}
+.toc-controls {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--gray-100);
+}
+.toc-controls button {
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--gray-200);
+  background: #fff;
+  color: var(--gray-600);
+  cursor: pointer;
+}
+.toc-controls button:hover {
+  border-color: var(--gray-400);
+  color: var(--gray-800);
+}
+
+/* ── COLLAPSIBLE SECTIONS ── */
+section.collapsible > *:not(h2) {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.2s ease, margin 0.2s ease;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+section.collapsible.is-open > *:not(h2) {
+  max-height: 2000px;
+  opacity: 1;
+}
+section.collapsible.is-open > p,
+section.collapsible.is-open > table,
+section.collapsible.is-open > div,
+section.collapsible.is-open > h3 {
+  margin-top: revert;
+  margin-bottom: revert;
+}
+.section-toggle {
+  float: right;
+  font-size: 20px;
+  color: var(--gray-400);
+  transition: transform 0.2s;
+  margin-left: 8px;
+}
+section.collapsible h2 {
+  user-select: none;
+}
+section.collapsible h2:hover .section-toggle {
+  color: var(--gray-800);
+}
+
+/* ── LINKS / PROFILES SECTION ── */
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.link-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--gray-800);
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+.link-item:hover {
+  border-color: var(--gray-400);
+  text-decoration: none;
+}
+.link-item .material-symbols-outlined {
+  font-size: 20px;
+  color: var(--gray-400);
+  margin-right: 0;
+}
+.link-item .link-label {
+  font-weight: 500;
+}
+.link-item .link-url {
+  font-size: 12px;
+  color: var(--gray-400);
+  display: block;
+}
+
+
+/* ── ENHANCED BRAND PAGE STYLES ── */
+
+/* Page header — brand-colored */
+.brand-header {
+  padding: 48px 40px 36px;
+  border-radius: var(--radius);
+  margin-bottom: 40px;
+  border: 1px solid var(--gray-200);
+}
+.brand-header .eyebrow {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.brand-header h1 {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 800;
+  font-size: 38px;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+.brand-header .subtitle {
+  font-size: 16px;
+  color: var(--gray-600);
+  max-width: 560px;
+}
+.brand-header .page-meta { margin-top: 16px; }
+
+/* Section labels — colored eyebrow above h2 */
+.section-label {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* Featured callout box — for key brand info */
+.callout {
+  border-radius: var(--radius);
+  padding: 32px;
+  margin: 24px 0;
+  border-left: 4px solid;
+}
+.callout h3 {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  margin: 0 0 12px;
+}
+.callout p { color: var(--gray-600); line-height: 1.7; }
+
+/* Rule cards — for do/don't, guidelines */
+.rule-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0;
+}
+.rule-card {
+  background: var(--gray-50);
+  border-radius: 14px;
+  padding: 24px;
+  border: 1px solid var(--gray-100);
+}
+.rule-card h4 {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.rule-card p {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* Comparison examples — red/green panels */
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+.compare-do {
+  background: rgba(58,158,110,0.06);
+  border-radius: 10px;
+  padding: 16px;
+}
+.compare-dont {
+  background: rgba(201,69,58,0.06);
+  border-radius: 10px;
+  padding: 16px;
+}
+.compare-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+.compare-do .compare-label { color: #2d7d55; }
+.compare-dont .compare-label { color: #b33d33; }
+.compare-text { font-size: 13px; color: var(--gray-600); line-height: 1.5; }
+
+/* Gradient preview strips */
+.gradient-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+.gradient-chip {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--gray-100);
+}
+.gradient-chip .preview { height: 80px; }
+.gradient-chip .info {
+  padding: 12px 14px;
+  background: var(--gray-50);
+}
+.gradient-chip .info strong {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 2px;
+}
+.gradient-chip .info span {
+  font-size: 12px;
+  color: var(--gray-400);
+}
+
+/* Internal links grid — for sub-guides within a brand page */
+.internal-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin: 16px 0; }
+.internal-link {
+  display: flex; align-items: center; gap: 12px;
+  padding: 16px 20px; background: var(--gray-50);
+  border: 1px solid var(--gray-200); border-radius: 12px;
+  text-decoration: none; color: inherit; transition: border-color 0.2s;
+}
+.internal-link:hover { border-color: var(--gray-400); text-decoration: none; }
+.internal-link .material-symbols-outlined { font-size: 22px; color: var(--gray-400); }
+.internal-link h4 { font-size: 15px; margin: 0 0 2px; font-weight: 600; }
+.internal-link p { font-size: 13px; color: var(--gray-600); margin: 0; }
+
+@media (max-width: 640px) { .rule-grid, .compare-grid { grid-template-columns: 1fr; } }

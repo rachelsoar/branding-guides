@@ -5,6 +5,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Soar Brand Guides</title>
 <link rel="stylesheet" href="shared/style.css">
+<style>
+  .brand-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 24px 0 48px; }
+  .brand-card {
+    border-radius: var(--radius);
+    padding: 32px 28px 24px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.15s, box-shadow 0.15s;
+    border: 1px solid var(--gray-200);
+  }
+  .brand-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); text-decoration: none; }
+  .brand-card h3 { font-family: 'Urbanist', sans-serif; font-size: 22px; font-weight: 800; margin: 0 0 6px; }
+  .brand-card .brand-desc { font-size: 14px; color: var(--gray-600); margin-bottom: 16px; }
+  .brand-card .sub-links { display: flex; flex-direction: column; gap: 6px; padding-top: 12px; border-top: 1px solid rgba(0,0,0,0.06); }
+  .brand-card .sub-link { font-size: 13px; color: inherit; opacity: 0.7; display: flex; align-items: center; gap: 4px; }
+  .brand-card .sub-link .material-symbols-outlined { font-size: 16px; }
+  .brand-card:hover .sub-link { opacity: 1; }
+
+  .bc-soar { background: linear-gradient(170deg, #fef6f3 0%, #fff 50%); }
+  .bc-soar h3 { color: var(--soar-coral); }
+  .bc-soar:hover { border-color: var(--soar-coral); }
+  .bc-wai { background: linear-gradient(170deg, #f4edfc 0%, #fff 50%); }
+  .bc-wai h3 { color: var(--wai-violet); }
+  .bc-wai:hover { border-color: var(--wai-violet); }
+  .bc-cp { background: linear-gradient(170deg, #e1f5ee 0%, #fff 50%); }
+  .bc-cp h3 { color: var(--cp-teal); }
+  .bc-cp:hover { border-color: var(--cp-teal); }
+
+  .shared-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 24px 0; }
+  .shared-card {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: border-color 0.2s;
+  }
+  .shared-card:hover { border-color: var(--gray-800); text-decoration: none; }
+  .shared-card .material-symbols-outlined { font-size: 24px; color: var(--gray-400); margin-bottom: 10px; display: block; }
+  .shared-card h4 { font-family: 'Urbanist', sans-serif; font-size: 15px; font-weight: 700; margin: 0 0 4px; }
+  .shared-card p { font-size: 13px; color: var(--gray-600); margin: 0; }
+
+  @media (max-width: 900px) { .brand-cards { grid-template-columns: 1fr; } .shared-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 500px) { .shared-grid { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
 
@@ -14,63 +62,55 @@
   <p>Everything you need to create on-brand content for Soar, Workplace AI, and Citizen Portal. Always current.</p>
 </header>
 
-<h2><span class="material-symbols-outlined">auto_stories</span> Brand guides</h2>
-
-<div class="card-grid">
-  <a href="soar/" class="card card--soar">
-    <div class="card-eyebrow">Soar</div>
-    <h3>Soar brand guide</h3>
-    <p>Parent brand identity, voice, colors, logo usage, and video direction.</p>
+<div class="brand-cards">
+  <a href="soar/" class="brand-card bc-soar">
+    <h3>Soar</h3>
+    <div class="brand-desc">Parent brand — identity, visual direction, voice, and company-level content.</div>
+    <div class="sub-links">
+      <span class="sub-link"><span class="material-symbols-outlined">movie</span> Video production guide</span>
+      <span class="sub-link"><span class="material-symbols-outlined">link</span> Websites and social profiles</span>
+    </div>
   </a>
-  <a href="workplace/" class="card card--wai">
-    <div class="card-eyebrow">Workplace AI</div>
-    <h3>WAI brand guide</h3>
-    <p>Product brand identity, social media voice, and visual standards.</p>
+  <a href="workplace/" class="brand-card bc-wai">
+    <h3>Workplace AI</h3>
+    <div class="brand-desc">Product brand — colors, gradients, High Focus voice, tiers, and value pillars.</div>
+    <div class="sub-links">
+      <span class="sub-link"><span class="material-symbols-outlined">share</span> Social media guide</span>
+      <span class="sub-link"><span class="material-symbols-outlined">link</span> Websites and sales links</span>
+    </div>
   </a>
-  <a href="citizen-portal/" class="card card--cp">
-    <div class="card-eyebrow">Citizen Portal</div>
-    <h3>CP brand guide</h3>
-    <p>Civic transparency brand, voice rules, color palette, and segment messaging.</p>
+  <a href="citizen-portal/" class="brand-card bc-cp">
+    <h3>Citizen Portal</h3>
+    <div class="brand-desc">Civic transparency brand — color palette, copy rules, segment messaging.</div>
+    <div class="sub-links">
+      <span class="sub-link"><span class="material-symbols-outlined">public</span> Segment landing pages</span>
+      <span class="sub-link"><span class="material-symbols-outlined">link</span> Websites and profiles</span>
+    </div>
   </a>
 </div>
 
 <h2><span class="material-symbols-outlined">menu_book</span> Shared guides</h2>
 
-<div class="card-grid">
-  <a href="guides/templates.html" class="card card--guide">
-    <div class="card-eyebrow">Templates</div>
-    <h3>Social media templates</h3>
-    <p>Canva templates organized by content type with platform size reference.</p>
+<div class="shared-grid">
+  <a href="guides/templates.html" class="shared-card">
+    <span class="material-symbols-outlined">dashboard</span>
+    <h4>Templates</h4>
+    <p>Canva templates by content type with size reference.</p>
   </a>
-  <a href="guides/naming.html" class="card card--guide">
-    <div class="card-eyebrow">Reference</div>
-    <h3>File naming convention</h3>
-    <p>How to name files for the CDN. Pattern, rules, and examples.</p>
+  <a href="guides/naming.html" class="shared-card">
+    <span class="material-symbols-outlined">label</span>
+    <h4>File naming</h4>
+    <p>CDN naming convention, rules, and examples.</p>
   </a>
-  <a href="guides/cadence.html" class="card card--guide">
-    <div class="card-eyebrow">Planning</div>
-    <h3>Content cadence</h3>
-    <p>Weekly posting rhythm per brand with content types and templates mapped.</p>
+  <a href="guides/cadence.html" class="shared-card">
+    <span class="material-symbols-outlined">calendar_month</span>
+    <h4>Content cadence</h4>
+    <p>Weekly posting rhythm per brand.</p>
   </a>
-  <a href="guides/copywriting.html" class="card card--guide">
-    <div class="card-eyebrow">Reference</div>
-    <h3>Copywriting rules</h3>
-    <p>Cross-brand copy decisions, approved language, and patterns to avoid.</p>
-  </a>
-</div>
-
-<h2><span class="material-symbols-outlined">movie</span> Specialized guides</h2>
-
-<div class="card-grid">
-  <a href="soar/video.html" class="card card--soar">
-    <div class="card-eyebrow">Soar</div>
-    <h3>Video production guide</h3>
-    <p>Music direction, visual aesthetic, pacing, and do's and don'ts for all Soar video.</p>
-  </a>
-  <a href="workplace/social.html" class="card card--wai">
-    <div class="card-eyebrow">Workplace AI</div>
-    <h3>Social media guide</h3>
-    <p>Voice laddering, caption structure, hashtag approach, and platform-specific rules.</p>
+  <a href="guides/copywriting.html" class="shared-card">
+    <span class="material-symbols-outlined">edit_note</span>
+    <h4>Copy rules</h4>
+    <p>Cross-brand decisions and patterns.</p>
   </a>
 </div>
 
@@ -79,7 +119,7 @@
 <div class="changelog-feed" id="changelog-feed">
   <div class="changelog-item">
     <span class="changelog-date">2026-07-01</span>
-    <span class="changelog-text"><strong>Brand hub:</strong> Site launched with initial guides for all three brands.</span>
+    <span class="changelog-text"><strong>Brand hub:</strong> Site launched with brand guides for Soar, Workplace AI, and Citizen Portal.</span>
   </div>
 </div>
 

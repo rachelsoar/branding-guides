@@ -5,174 +5,168 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Citizen Portal — Brand Guide</title>
 <link rel="stylesheet" href="../shared/style.css">
+<style>
+  .brand-header { background: linear-gradient(170deg, #e1f5ee 0%, #fff 60%); }
+  .brand-header .eyebrow { color: var(--cp-teal); }
+  .section-label { color: var(--cp-teal); }
+  .callout { background: #e1f5ee; border-color: var(--cp-teal); }
+  .callout h3 { color: #04342C; }
+  .toc-link:hover { color: var(--cp-teal); border-bottom-color: var(--cp-teal); }
+  a { color: var(--cp-teal); }
+</style>
 </head>
 <body>
 
-<div class="breadcrumb"><a href="../">Brand Guides</a> / Citizen Portal</div>
+<div class="back-bar">
+  <a href="../"><span class="material-symbols-outlined">arrow_back</span> Brand Guides</a>
+  <span>/</span> Citizen Portal
+</div>
 
-<header class="site-header" style="text-align:left; padding:32px 0;">
-  <div class="eyebrow" style="color: var(--cp-teal);">Citizen Portal</div>
-  <h1>Brand guide</h1>
+<div class="brand-header">
+  <div class="eyebrow">Internal Reference — Creative Team</div>
+  <h1>Citizen Portal<br>Brand Guide</h1>
+  <p class="subtitle">Brand identity, color palette, voice rules, and segment messaging for the Citizen Portal civic transparency platform.</p>
   <p class="page-meta">Last updated: July 1, 2026</p>
-</header>
+</div>
+
+<div id="page-index"><div class="toc-label">On this page</div></div>
 
 <section data-updated="2026-07-01">
+<div class="section-label">Overview</div>
 <h2>Brand identity</h2>
-<p>Citizen Portal is a government transparency platform that gives citizens access to public spending data, elected official contact, and legislative tracking for their jurisdiction. The brand is built on trust, clarity, and civic empowerment.</p>
-
-<h3>Brand position</h3>
-<p>Insurance against being blindsided by government decisions — not a search tool, but a way for citizens to stay informed about what their government is doing with their money and their representation.</p>
+<div class="callout">
+  <h3>Insurance against being blindsided.</h3>
+  <p>Citizen Portal gives citizens access to public spending data, elected official contact, and legislative tracking for their jurisdiction. Not a search tool — a way for citizens to stay informed about what their government is doing with their money and their representation.</p>
+</div>
 </section>
 
 <section data-updated="2026-07-01">
-<h2>Color palette</h2>
-<p>CP uses a patriotic-adjacent palette: maroon and blue convey authority and trust without defaulting to literal red-white-and-blue.</p>
-
+<div class="section-label">Color Palette</div>
+<h2>CP colors</h2>
+<p>Patriotic-adjacent: maroon and blue convey authority and trust without defaulting to literal red-white-and-blue.</p>
 <div class="swatch-grid">
-  <div class="swatch">
-    <div class="swatch-color" style="background:#78002d;"></div>
-    <div class="swatch-label"><strong>Maroon (primary)</strong><code>#78002d</code></div>
-  </div>
-  <div class="swatch">
-    <div class="swatch-color" style="background:#5a0022;"></div>
-    <div class="swatch-label"><strong>Maroon dark</strong><code>#5a0022</code></div>
-  </div>
-  <div class="swatch">
-    <div class="swatch-color" style="background:#f5e6ec;"></div>
-    <div class="swatch-label"><strong>Maroon tint</strong><code>#f5e6ec</code></div>
-  </div>
-  <div class="swatch">
-    <div class="swatch-color" style="background:#254887;"></div>
-    <div class="swatch-label"><strong>Blue (secondary)</strong><code>#254887</code></div>
-  </div>
-  <div class="swatch">
-    <div class="swatch-color" style="background:#ffd83a;"></div>
-    <div class="swatch-label"><strong>Yellow (accent)</strong><code>#ffd83a</code></div>
-  </div>
-  <div class="swatch">
-    <div class="swatch-color" style="background:#0f1d3a;"></div>
-    <div class="swatch-label"><strong>Dark navy</strong><code>#0f1d3a</code></div>
-  </div>
-</div>
-
-<h3>Background registers</h3>
-<table>
-  <tr><th>Token</th><th>Value</th><th>Use</th></tr>
-  <tr><td>--bg</td><td>#ffffff</td><td>Default page background</td></tr>
-  <tr><td>--bg-alt</td><td>#f7f7f5</td><td>Alternating sections</td></tr>
-  <tr><td>--bg-dark</td><td>#254887</td><td>Hero, CTA blocks</td></tr>
-  <tr><td>--bg-dark-deep</td><td>#0f1d3a</td><td>Footer, deep sections</td></tr>
-  <tr><td>--bg-accent</td><td>#eef3fa</td><td>Feature highlights</td></tr>
-</table>
-</section>
-
-<section data-updated="2026-07-01">
-<h2>Typography</h2>
-<p>Citizen Portal uses system fonts — no web font dependencies. This keeps pages fast and accessible across all devices and government network connections.</p>
-<table>
-  <tr><th>Element</th><th>Font</th><th>Weight</th><th>Size</th></tr>
-  <tr><td>Headings</td><td>system-ui, sans-serif</td><td>700 (bold)</td><td>Varies by hierarchy</td></tr>
-  <tr><td>Body text</td><td>system-ui, sans-serif</td><td>400 (regular)</td><td>17px, line-height 1.65</td></tr>
-  <tr><td>Eyebrows</td><td>system-ui, sans-serif</td><td>600</td><td>13px, uppercase, tracked</td></tr>
-  <tr><td>Icons</td><td>Material Symbols Outlined</td><td>—</td><td>Varies</td></tr>
-</table>
-<p>Hard rules: 12px is the minimum font size. <code>text-wrap: balance</code> and <code>text-wrap: pretty</code> applied globally.</p>
-</section>
-
-<section data-updated="2026-07-01">
-<h2>Logo</h2>
-<p>Three logo variants exist in the brand assets folder. All available via CDN once uploaded to the CP Shared Drive.</p>
-<table>
-  <tr><th>Variant</th><th>File</th><th>Use</th></tr>
-  <tr><td>Primary (dark text)</td><td>citizenportallogo01.png</td><td>Light backgrounds</td></tr>
-  <tr><td>Alternate (dark text)</td><td>citizenportallogo02.png</td><td>Light backgrounds, alternate layout</td></tr>
-  <tr><td>White</td><td>cplogo_white.svg</td><td>Dark/colored backgrounds</td></tr>
-</table>
-
-<div class="decision-needed">
-  <strong>Decision needed:</strong> Logo usage guidelines — minimum clear space, minimum size, lockup rules with tagline. Waiting on brand direction from Thomas.
+  <div class="swatch"><div class="swatch-color" style="background:#78002d;"></div><div class="swatch-label"><strong>Maroon (primary)</strong><code>#78002d</code></div></div>
+  <div class="swatch"><div class="swatch-color" style="background:#5a0022;"></div><div class="swatch-label"><strong>Maroon dark</strong><code>#5a0022</code></div></div>
+  <div class="swatch"><div class="swatch-color" style="background:#f5e6ec;"></div><div class="swatch-label"><strong>Maroon tint</strong><code>#f5e6ec</code></div></div>
+  <div class="swatch"><div class="swatch-color" style="background:#254887;"></div><div class="swatch-label"><strong>Blue</strong><code>#254887</code></div></div>
+  <div class="swatch"><div class="swatch-color" style="background:#ffd83a;"></div><div class="swatch-label"><strong>Yellow</strong><code>#ffd83a</code></div></div>
+  <div class="swatch"><div class="swatch-color" style="background:#0f1d3a;"></div><div class="swatch-label"><strong>Dark navy</strong><code>#0f1d3a</code></div></div>
 </div>
 </section>
 
 <section data-updated="2026-07-01">
-<h2>Voice and tone</h2>
-<p>CP's voice is authoritative but accessible. We are not activists — we are a tool for informed citizens. The tone is factual, empowering, and non-partisan.</p>
+<div class="section-label">Typography</div>
+<h2>Fonts</h2>
+<div class="rule-grid">
+  <div class="rule-card">
+    <div style="font-family:system-ui,sans-serif; font-weight:700; font-size:36px; line-height:1.1; color:#0f1d3a; margin-bottom:4px;">System UI</div>
+    <div style="font-family:system-ui,sans-serif; font-weight:700; font-size:24px; line-height:1.15; color:#0f1d3a; margin-bottom:4px;">Section headings at 24px / 700</div>
+    <div style="font-family:system-ui,sans-serif; font-weight:600; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:var(--cp-teal); margin-bottom:12px;">EYEBROW LABELS AT 13PX / 600</div>
+    <p style="font-size:13px;">No web fonts — system-ui only. Fast, accessible, works on government networks.</p>
+  </div>
+  <div class="rule-card">
+    <div style="font-family:system-ui,sans-serif; font-weight:400; font-size:17px; line-height:1.65; color:var(--gray-800); margin-bottom:12px;">Body copy renders at 17px with 1.65 line height. This is how all paragraph text appears across Citizen Portal pages and documents.</div>
+    <div style="font-family:system-ui,sans-serif; font-weight:400; font-size:13px; color:var(--gray-400);">Small text, metadata, and timestamps at 13px — nothing below 12px</div>
+  </div>
+</div>
+</section>
 
-<h3>Copy rules — locked decisions</h3>
+<section data-updated="2026-07-01">
+<div class="section-label">Logo</div>
+<h2>CP logo</h2>
+<div class="decision-needed"><strong>Logo assets are being migrated to the CDN.</strong> Primary, alternate, and white variants will be displayed here with usage guidelines once available. Contact creative direction for logo files.</div>
+</section>
+
+<section data-updated="2026-07-01">
+<div class="section-label">Voice & Tone</div>
+<h2>How CP sounds</h2>
+<p>Authoritative but accessible. Not activists — a tool for informed citizens. Factual, empowering, and non-partisan.</p>
+
+<h3>Copy rules</h3>
 <table>
-  <tr><th>Rule</th><th>Details</th><th>Decided by</th></tr>
-  <tr><td>Never say "democracy"</td><td>Use "constitutional republic" instead</td><td>Thomas, endorsed by Corbin</td></tr>
-  <tr><td>Never say "unlimited"</td><td>Avoid in any feature or pricing description</td><td>Thomas</td></tr>
-  <tr><td>Tagline punctuation</td><td>"Facts, not headlines" — comma required</td><td>Thomas</td></tr>
-  <tr><td>No "whether you're _ or _" patterns</td><td>Sounds AI-generated and repetitive</td><td>Creative direction</td></tr>
-  <tr><td>No emojis</td><td>Use Material Symbols Outlined icons only</td><td>Creative direction</td></tr>
-  <tr><td>12px font floor</td><td>Nothing smaller than 12px anywhere</td><td>Creative direction</td></tr>
+  <tr><th>Rule</th><th>Details</th></tr>
+  <tr><td>Never say "democracy"</td><td>Use "constitutional republic"</td></tr>
+  <tr><td>Never say "unlimited"</td><td>Avoid in any feature or pricing description</td></tr>
+  <tr><td>Tagline punctuation</td><td>"Facts, not headlines" — comma required</td></tr>
+  <tr><td>No "whether you're _ or _"</td><td>Sounds AI-generated and repetitive</td></tr>
+  <tr><td>No emojis</td><td>Material Symbols Outlined only</td></tr>
 </table>
 
-<div class="decision-needed">
-  <strong>Decision needed:</strong> Full voice ladder — personality traits, vocabulary preferences, example captions. Waiting on Thomas's input for CP-specific messaging pillars.
-</div>
+<div class="decision-needed"><strong>TBD:</strong> Full voice ladder — personality traits, vocabulary preferences, and example captions for CP-specific content.</div>
+</section>
 
-<h3>Messaging by segment</h3>
+<section data-updated="2026-07-01">
+<div class="section-label">Segments</div>
+<h2>Messaging by segment</h2>
 <p>CP serves five distinct audiences. Each has its own landing page and messaging angle.</p>
 <table>
-  <tr><th>Segment</th><th>Page</th><th>Angle</th></tr>
-  <tr><td>Government</td><td>/solutions/government</td><td>Constituent engagement and transparency tool</td></tr>
-  <tr><td>Advocacy</td><td>/solutions/advocacy</td><td>Data-backed accountability and civic action</td></tr>
-  <tr><td>Press</td><td>/solutions/press</td><td>Source for verified public spending and legislation data</td></tr>
-  <tr><td>Business</td><td>/solutions/business</td><td>Monitor regulations and government contracts</td></tr>
-  <tr><td>Education</td><td>/solutions/education</td><td>Civics education and real-world government data</td></tr>
+  <tr><th>Segment</th><th>Angle</th></tr>
+  <tr><td>Government</td><td>Constituent engagement and transparency tool</td></tr>
+  <tr><td>Advocacy</td><td>Data-backed accountability and civic action</td></tr>
+  <tr><td>Press</td><td>Source for verified public spending and legislation data</td></tr>
+  <tr><td>Business</td><td>Monitor regulations and government contracts</td></tr>
+  <tr><td>Education</td><td>Civics education with real-world government data</td></tr>
 </table>
 </section>
 
 <section data-updated="2026-07-01">
-<h2>Key features (for content reference)</h2>
-<p>When creating content, reference these capabilities — confirmed as live or coming soon.</p>
+<div class="section-label">Product</div>
+<h2>Key features</h2>
 <table>
-  <tr><th>Feature</th><th>Description</th><th>Status</th></tr>
-  <tr><td>Government spending data</td><td>Spending breakdown by jurisdiction</td><td>Confirmed — Paul's new feature</td></tr>
-  <tr><td>Message elected officials</td><td>Contact reps directly through the platform</td><td>Confirmed — Paul's new feature</td></tr>
-  <tr><td>Legislative tracking</td><td>Follow bills and vote records</td><td>Core feature</td></tr>
-  <tr><td>Jurisdiction-level data</td><td>Federal, state, county, city granularity</td><td>Core feature</td></tr>
+  <tr><th>Feature</th><th>Description</th></tr>
+  <tr><td>Government spending data</td><td>Spending breakdown by jurisdiction</td></tr>
+  <tr><td>Message elected officials</td><td>Contact representatives directly</td></tr>
+  <tr><td>Legislative tracking</td><td>Follow bills and vote records</td></tr>
+  <tr><td>Jurisdiction-level data</td><td>Federal, state, county, city granularity</td></tr>
 </table>
-
-<div class="decision-needed">
-  <strong>Jurisdiction count rule:</strong> Paul's jurisdiction counts (number of cities, counties, etc.) cannot appear on any prospect-facing materials without verification from Jessica, Kenneth, or Ryan. Use feature descriptions, not numbers.
-</div>
+<div class="decision-needed"><strong>Important:</strong> Jurisdiction counts (number of cities, counties, etc.) require verification before appearing on any external materials.</div>
 </section>
 
 <section data-updated="2026-07-01">
+<div class="section-label">Social Media</div>
 <h2>Social media</h2>
+<div class="decision-needed"><strong>Not yet established.</strong> CP social media is in early stages. Needs:<br><br>
+  Platform priority<br>
+  Content pillars<br>
+  Caption voice and tone examples<br>
+  Hashtag strategy<br>
+  Profile bios (pending tagline resolution)</div>
+</section>
 
-<div class="decision-needed">
-  <strong>Not yet established.</strong> CP social media presence is in early stages. The following need to be defined:
-  <br><br>
-  - Platform priority (which platforms first)<br>
-  - Content pillars specific to CP audience<br>
-  - Caption voice and tone examples<br>
-  - Hashtag strategy<br>
-  - Profile bios (drafted, blocked on Soar tagline decision from Patrick)
+<section data-updated="2026-07-01">
+<div class="section-label">Links</div>
+<h2>Websites and profiles</h2>
+<h3>Websites</h3>
+<div class="links-grid">
+  <a href="https://citizenportal.ai" class="link-item" target="_blank"><span class="material-symbols-outlined">language</span><div><span class="link-label">citizenportal.ai</span><span class="link-url">Main website</span></div></a>
+  <a href="https://dev.citizenportal.ai" class="link-item" target="_blank"><span class="material-symbols-outlined">code</span><div><span class="link-label">dev.citizenportal.ai</span><span class="link-url">Development / staging</span></div></a>
+</div>
+<h3>Segment landing pages</h3>
+<div class="links-grid">
+  <a href="https://dev.citizenportal.ai/solutions/government" class="link-item" target="_blank"><span class="material-symbols-outlined">account_balance</span><div><span class="link-label">Government</span><span class="link-url">/solutions/government</span></div></a>
+  <a href="https://dev.citizenportal.ai/solutions/advocacy" class="link-item" target="_blank"><span class="material-symbols-outlined">campaign</span><div><span class="link-label">Advocacy</span><span class="link-url">/solutions/advocacy</span></div></a>
+  <a href="https://dev.citizenportal.ai/solutions/press" class="link-item" target="_blank"><span class="material-symbols-outlined">newspaper</span><div><span class="link-label">Press</span><span class="link-url">/solutions/press</span></div></a>
+  <a href="https://dev.citizenportal.ai/solutions/business" class="link-item" target="_blank"><span class="material-symbols-outlined">business</span><div><span class="link-label">Business</span><span class="link-url">/solutions/business</span></div></a>
+  <a href="https://dev.citizenportal.ai/solutions/education" class="link-item" target="_blank"><span class="material-symbols-outlined">school</span><div><span class="link-label">Education</span><span class="link-url">/solutions/education</span></div></a>
 </div>
 </section>
 
 <section data-updated="2026-07-01">
-<h2>Decisions needed — summary</h2>
+<div class="section-label">Status</div>
+<h2>Open items</h2>
 <table>
-  <tr><th>Decision</th><th>Owner</th><th>Blocks</th></tr>
-  <tr><td>Full voice ladder and messaging pillars</td><td>Thomas</td><td>Social media content, caption templates</td></tr>
-  <tr><td>Logo usage guidelines (clear space, min size)</td><td>Thomas + Rachel</td><td>Brand guide completion</td></tr>
-  <tr><td>Social media platform priority</td><td>Thomas + Patrick</td><td>Template creation, posting cadence</td></tr>
-  <tr><td>Hashtag strategy</td><td>Patrick</td><td>Content cadence finalization</td></tr>
-  <tr><td>Photography / image direction</td><td>Thomas + Rachel</td><td>Social media visual identity</td></tr>
-  <tr><td>Profile bios finalization</td><td>Patrick (tagline decision)</td><td>Account setup for Cel/Kezia</td></tr>
+  <tr><th>Item</th><th>Status</th></tr>
+  <tr><td>Full voice ladder and messaging pillars</td><td>TBD</td></tr>
+  <tr><td>Logo usage guidelines</td><td>TBD</td></tr>
+  <tr><td>Social media platform priority</td><td>TBD</td></tr>
+  <tr><td>Hashtag strategy</td><td>TBD</td></tr>
+  <tr><td>Photography / image direction</td><td>TBD</td></tr>
+  <tr><td>Profile bios</td><td>Pending tagline resolution</td></tr>
 </table>
 </section>
 
-<footer class="site-footer">
-  <a href="../">Back to Brand Guides hub</a><br>
-  Soar Brand Guides — Maintained by Creative Direction
-</footer>
-
+<footer class="site-footer"><a href="../">Back to Brand Guides hub</a><br>Soar Brand Guides — Maintained by Creative Direction</footer>
+<script src="../shared/nav.js"></script>
 <script src="../shared/changelog.js"></script>
 </body>
 </html>
