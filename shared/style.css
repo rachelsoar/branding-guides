@@ -13,7 +13,8 @@
   --wai-dark: #01081b;
   --cp-teal: #1D9E75;
   --cp-maroon: #78002d;
-  --cp-dark: #04342C;
+  --cp-navy: #254887;
+  --cp-dark: #0f1d3a;
   --gray-50: #fafaf8;
   --gray-100: #f0efec;
   --gray-200: #e0dfdc;
@@ -121,8 +122,8 @@ a:hover { text-decoration: underline; }
 .card--soar:hover { border-color: var(--soar-coral); }
 .card--wai .card-eyebrow { color: var(--wai-violet); }
 .card--wai:hover { border-color: var(--wai-violet); }
-.card--cp .card-eyebrow { color: var(--cp-maroon); }
-.card--cp:hover { border-color: var(--cp-maroon); }
+.card--cp .card-eyebrow { color: var(--cp-navy); }
+.card--cp:hover { border-color: var(--cp-navy); }
 .card--guide .card-eyebrow { color: var(--gray-600); }
 .card--guide:hover { border-color: var(--gray-800); }
 
