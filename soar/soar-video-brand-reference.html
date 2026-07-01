@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOAR — Video Production Brand Reference</title>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: #ffffff; }
+  body {
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: #1a1917;
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 40px 64px;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    text-align: center;
+    padding: 56px 0 48px;
+    border-bottom: 1px solid rgba(26,25,23,0.08);
+    margin-bottom: 56px;
+  }
+  .header-eyebrow {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #EE785A;
+    margin-bottom: 16px;
+  }
+  .header h1 {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 1.1;
+    color: #06091E;
+    margin-bottom: 12px;
+  }
+  .header p {
+    font-size: 16px;
+    color: #7a7a7a;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  /* ── SECTIONS ── */
+  .section {
+    margin-bottom: 56px;
+  }
+  .section-label {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #EE785A;
+    margin-bottom: 8px;
+  }
+  .section h2 {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1.15;
+    color: #06091E;
+    margin-bottom: 20px;
+  }
+  .section p {
+    color: #545454;
+    max-width: 680px;
+    line-height: 1.7;
+  }
+
+  /* ── COLOR PALETTE ── */
+  .palette-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .swatch {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(26,25,23,0.06);
+  }
+  .swatch-color {
+    height: 80px;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px 14px;
+  }
+  .swatch-info {
+    padding: 12px 14px;
+    background: #fafaf8;
+  }
+  .swatch-name {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #1a1917;
+  }
+  .swatch-hex {
+    font-family: 'Outfit', monospace;
+    font-size: 13px;
+    color: #7a7a7a;
+    margin-top: 2px;
+  }
+  .swatch-use {
+    font-size: 12px;
+    color: #999;
+    margin-top: 4px;
+  }
+
+  /* ── TYPOGRAPHY ── */
+  .type-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 20px;
+  }
+  .type-card {
+    background: #fafaf8;
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid rgba(26,25,23,0.06);
+  }
+  .type-card-label {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #EE785A;
+    margin-bottom: 12px;
+  }
+  .type-display {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 1.1;
+    color: #06091E;
+    margin-bottom: 8px;
+  }
+  .type-body {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.65;
+    color: #545454;
+  }
+  .type-meta {
+    font-size: 12px;
+    color: #999;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(26,25,23,0.06);
+  }
+
+  /* ── DO / DON'T ── */
+  .direction-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 24px;
+  }
+  .direction-card {
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid rgba(26,25,23,0.06);
+  }
+  .direction-card.do {
+    background: linear-gradient(160deg, #f0f7f4 0%, #fafaf8 100%);
+    border-left: 4px solid #3a9e6e;
+  }
+  .direction-card.dont {
+    background: linear-gradient(160deg, #fdf3f1 0%, #fafaf8 100%);
+    border-left: 4px solid #c9453a;
+  }
+  .direction-card h3 {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  .direction-card.do h3 { color: #2d7d55; }
+  .direction-card.dont h3 { color: #b33d33; }
+  .direction-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #545454;
+    line-height: 1.5;
+  }
+  .direction-item .icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 1px;
+  }
+  .do .icon { background: #3a9e6e; color: #fff; }
+  .dont .icon { background: #c9453a; color: #fff; }
+
+  /* ── MOOD STRIP ── */
+  .mood-strip {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .mood-chip {
+    text-align: center;
+    padding: 28px 16px;
+    border-radius: 12px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .mood-chip:nth-child(1) { background: linear-gradient(180deg, #e8f0f8 0%, #d4e5f4 100%); color: #3a6b94; }
+  .mood-chip:nth-child(2) { background: linear-gradient(180deg, #fdf5ec 0%, #f5e6d3 100%); color: #8a6938; }
+  .mood-chip:nth-child(3) { background: linear-gradient(180deg, #edf5f0 0%, #d6e8dc 100%); color: #3d6e4c; }
+  .mood-chip:nth-child(4) { background: linear-gradient(180deg, #fef9f0 0%, #fcebd4 100%); color: #926a2e; }
+  .mood-chip:nth-child(5) { background: linear-gradient(180deg, #f0ecf6 0%, #ddd4ed 100%); color: #5b3578; }
+  .mood-sub {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    margin-top: 6px;
+    opacity: 0.7;
+  }
+
+  /* ── MOTION & VOICE ── */
+  .rule-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .rule-card {
+    background: #fafaf8;
+    border-radius: 14px;
+    padding: 28px 24px;
+    border: 1px solid rgba(26,25,23,0.06);
+  }
+  .rule-card h4 {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #06091E;
+    margin-bottom: 10px;
+  }
+  .rule-card p {
+    font-size: 13px;
+    color: #7a7a7a;
+    line-height: 1.6;
+  }
+
+  /* ── FOOTER NOTE ── */
+  .footer-note {
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(26,25,23,0.08);
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+  }
+  .footer-note strong {
+    color: #545454;
+    font-weight: 600;
+  }
+
+  /* ── BRAND STRIP ── */
+  .brand-strip {
+    display: flex;
+    gap: 20px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .brand-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid rgba(26,25,23,0.08);
+    background: #fff;
+    color: #545454;
+  }
+  .brand-tag .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    body { padding: 24px 20px 48px; }
+    .type-grid, .direction-grid { grid-template-columns: 1fr; }
+    .mood-strip { grid-template-columns: repeat(3, 1fr); }
+    .rule-grid { grid-template-columns: 1fr; }
+    .palette-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-eyebrow">Internal Reference — Creative Team Only</div>
+  <h1>SOAR Video Brand Guide</h1>
+  <p>Visual direction for all Soar-branded video content. When in doubt, reference this page before making production decisions.</p>
+</div>
+
+<!-- VISUAL MOOD -->
+<div class="section">
+  <div class="section-label">Visual Identity</div>
+  <h2>The Soar Look: Light, Open, Human</h2>
+  <p>Soar's visual identity is built on one idea: technology that serves people should look like it belongs in their world, not in a sci-fi movie. Think open sky, warm light, natural texture. The aesthetic is expansive and grounded — never cold, never aggressive, never "tech for tech's sake."</p>
+
+  <div class="mood-strip">
+    <div class="mood-chip">Open Sky<div class="mood-sub">Dawn, clouds, horizon</div></div>
+    <div class="mood-chip">Real Life<div class="mood-sub">Cities, homes, classrooms</div></div>
+    <div class="mood-chip">Living Green<div class="mood-sub">Growth, gardens, trees</div></div>
+    <div class="mood-chip">Golden Light<div class="mood-sub">Sunrise, golden hour</div></div>
+    <div class="mood-chip">Quiet Depth<div class="mood-sub">Dusk, reflection, calm</div></div>
+  </div>
+</div>
+
+<!-- COLOR PALETTE -->
+<div class="section">
+  <div class="section-label">Color Palette</div>
+  <h2>Soar Corporate Colors</h2>
+  <p>These are the only colors used in Soar corporate materials. Tints and transparencies are acceptable. No neon, no acid green, no electric blue.</p>
+
+  <div class="palette-grid">
+    <div class="swatch">
+      <div class="swatch-color" style="background: #EE785A;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Coral</div>
+        <div class="swatch-hex">#EE785A</div>
+        <div class="swatch-use">Primary / CTAs / Accents</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: #06091E;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Navy</div>
+        <div class="swatch-hex">#06091E</div>
+        <div class="swatch-use">Headlines / Dark sections</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: #5B3578;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Purple</div>
+        <div class="swatch-hex">#5B3578</div>
+        <div class="swatch-use">Secondary accent</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: #F5F4EF;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Cream</div>
+        <div class="swatch-hex">#F5F4EF</div>
+        <div class="swatch-use">Primary background</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: #d5eaff;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Sky</div>
+        <div class="swatch-hex">#D5EAFF</div>
+        <div class="swatch-use">Alt background / accent</div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div style="margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;">
+    <div style="background: #fafaf8; border-radius: 14px; padding: 24px; border: 1px solid rgba(26,25,23,0.06);">
+      <div style="font-family: 'Urbanist'; font-weight: 700; font-size: 14px; color: #06091E; margin-bottom: 14px;">Workplace AI</div>
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;"><div style="width: 16px; height: 16px; border-radius: 50%; background: #8100ff; flex-shrink: 0;"></div><span style="font-size: 13px; color: #545454;">Violet #8100FF — primary</span></div>
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;"><div style="width: 16px; height: 16px; border-radius: 50%; background: #2e68fd; flex-shrink: 0;"></div><span style="font-size: 13px; color: #545454;">Blue #2E68FD — secondary</span></div>
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;"><div style="width: 16px; height: 16px; border-radius: 50%; background: #f4edfc; flex-shrink: 0; border: 1px solid #e0d4f0;"></div><span style="font-size: 13px; color: #545454;">Lavender #F4EDFC — accent</span></div>
+      <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 16px; height: 16px; border-radius: 50%; background: #01081b; flex-shrink: 0;"></div><span style="font-size: 13px; color: #545454;">Near-Black #01081B — dark</span></div>
+    </div>
+    <div style="background: #fafaf8; border-radius: 14px; padding: 24px; border: 1px solid rgba(26,25,23,0.06);">
+      <div style="font-family: 'Urbanist'; font-weight: 700; font-size: 14px; color: #06091E; margin-bottom: 14px;">Fleet of Agents</div>
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;"><div style="width: 16px; height: 16px; border-radius: 50%; background: #5840d4; flex-shrink: 0;"></div><span style="font-size: 13px; color: #545454;">Purple #5840D4 — primary</span></div>
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;"><div style="width: 16px; height: 16px; border-radius: 50%; background: #F5F4EF; flex-shrink: 0; border: 1px solid #e8e7e2;"></div><span style="font-size: 13px; color: #545454;">Cream #F5F4EF — background</span></div>
+      <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 16px; height: 16px; border-radius: 50%; background: #1a1917; flex-shrink: 0;"></div><span style="font-size: 13px; color: #545454;">Charcoal #1A1917 — dark</span></div>
+    </div>
+    <div style="background: #fafaf8; border-radius: 14px; padding: 24px; border: 1px solid rgba(26,25,23,0.06);">
+      <div style="font-family: 'Urbanist'; font-weight: 700; font-size: 14px; color: #06091E; margin-bottom: 14px;">Citizen Portal</div>
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;"><div style="width: 16px; height: 16px; border-radius: 50%; background: #254887; flex-shrink: 0;"></div><span style="font-size: 13px; color: #545454;">Blue #254887 — primary</span></div>
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;"><div style="width: 16px; height: 16px; border-radius: 50%; background: #78002d; flex-shrink: 0;"></div><span style="font-size: 13px; color: #545454;">Maroon #78002D — secondary</span></div>
+      <div style="display: flex; align-items: center; gap: 8px;"><div style="width: 16px; height: 16px; border-radius: 50%; background: #ffd83a; flex-shrink: 0; border: 1px solid #e8c534;"></div><span style="font-size: 13px; color: #545454;">Yellow #FFD83A — accent</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- TYPOGRAPHY -->
+<div class="section">
+  <div class="section-label">Typography</div>
+  <h2>Two Fonts. No Exceptions.</h2>
+
+  <div class="type-grid">
+    <div class="type-card">
+      <div class="type-card-label">Headlines & Titles</div>
+      <div class="type-display">Urbanist</div>
+      <div style="font-family: 'Urbanist'; font-weight: 700; font-size: 22px; color: #06091E; margin-top: 4px;">Bold, confident, grounded</div>
+      <div class="type-meta">
+        Weights: 600 (buttons), 700 (cards), 800 (headlines, hero)<br>
+        Use for: all titles, lower thirds, on-screen text, supers
+      </div>
+    </div>
+    <div class="type-card">
+      <div class="type-card-label">Body & Supporting</div>
+      <div class="type-body" style="font-size: 28px; margin-bottom: 4px;">Outfit</div>
+      <div class="type-body">Clean, readable, warm without being soft. The workhorse font for everything that isn't a headline.</div>
+      <div class="type-meta">
+        Weights: 300–400 (body), 500–600 (emphasis)<br>
+        Use for: captions, descriptions, body supers, credits
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ICONS & IMAGERY -->
+<div class="section">
+  <div class="section-label">Icons & Imagery</div>
+  <h2>What to Use, Where to Find It</h2>
+
+  <div class="rule-grid">
+    <div class="rule-card">
+      <h4>Icons</h4>
+      <p>Google Material Symbols Outlined — this is the only icon library for Soar. Clean, minimal line icons. For social media brand icons (LinkedIn, X, Instagram, YouTube), use Font Awesome. Never use custom 3D icons, glowing orbs, or illustrated icon sets.</p>
+    </div>
+    <div class="rule-card">
+      <h4>Stock Footage & Photos</h4>
+      <p>Source from Pexels, Unsplash, or Canva's stock library for modern footage. For historical or humanity-focused segments, archival footage works beautifully — black-and-white history, old film grain, real moments from real eras. Archive.org is a strong source for public domain material. Always verify licensing before using anything: confirm it's public domain, Creative Commons, or royalty-free. If there's any doubt about rights, don't use it — find an alternative. No AI-generated stock imagery. No composites of floating elements. If it looks like a sci-fi movie poster, it's wrong.</p>
+    </div>
+    <div class="rule-card">
+      <h4>Product Screenshots</h4>
+      <p>Pull directly from the live sites. Show them clean — in a browser frame or device mockup on a solid or gradient background. Screenshots are proof the product is real. Don't add effects that make them look fake.</p>
+    </div>
+  </div>
+</div>
+
+<!-- DO / DON'T -->
+<div class="section">
+  <div class="section-label">Creative Direction</div>
+  <h2>What Soar Looks Like on Screen</h2>
+  <p>Every visual choice should answer one question: does this make the viewer feel like this company cares about people, or about looking impressive?</p>
+
+  <div class="direction-grid">
+    <div class="direction-card do">
+      <h3>Use This</h3>
+      <div class="direction-item"><div class="icon">✓</div><div>Cloud and sky imagery — dawn, golden hour, open horizon. The visual metaphor for "soar" is literal: air, light, lift.</div></div>
+      <div class="direction-item"><div class="icon">✓</div><div>Real humans in real settings. Candid over posed. Genuine expressions over stock smiles.</div></div>
+      <div class="direction-item"><div class="icon">✓</div><div>Warm, natural color grading. Slight warmth in shadows, clean highlights. Think documentary, not commercial.</div></div>
+      <div class="direction-item"><div class="icon">✓</div><div>Clean cuts and gentle dissolves. Let the content breathe. Transitions should be invisible.</div></div>
+      <div class="direction-item"><div class="icon">✓</div><div>Clean gradient backgrounds — soft whites to off-whites, light coral-to-cream, subtle sky tones. Minimalist and uncluttered. Let color do the work, not texture.</div></div>
+      <div class="direction-item"><div class="icon">✓</div><div>Breathing room. Generous white space in graphics. Generous pauses in edit. Don't fill every second.</div></div>
+      <div class="direction-item"><div class="icon">✓</div><div>Product screenshots shown clean — in a browser frame or device mockup. No effects layered on top.</div></div>
+    </div>
+    <div class="direction-card dont">
+      <h3>Never This</h3>
+      <div class="direction-item"><div class="icon">✗</div><div>Glitch effects, digital distortion, data-stream overlays, or matrix-style text. This is not a cyberpunk brand.</div></div>
+      <div class="direction-item"><div class="icon">✗</div><div>Neon or electric color accents. No acid green, hot pink, or electric blue outside the brand palette.</div></div>
+      <div class="direction-item"><div class="icon">✗</div><div>"AI brain" stock footage — neural networks, glowing circuits, robot faces, binary code rain. We are not that company.</div></div>
+      <div class="direction-item"><div class="icon">✗</div><div>Tech-bro transitions — whip pans with motion blur, zoom punches, RGB split, lens distortion effects.</div></div>
+      <div class="direction-item"><div class="icon">✗</div><div>Dark backgrounds as the dominant visual. Soar is light. Navy sections are accent, not the baseline.</div></div>
+      <div class="direction-item"><div class="icon">✗</div><div>3D renders, heavy particle effects, floating holographic UI, or sci-fi HUD overlays. Subtle warm glow and bloom are fine (see Transitions & Effects) — but neon glow, electric outlines, and cold blue/teal light effects are off-brand. If motion graphics are needed, use minimal vector line animations — clean, flat, 2D. Think thin lines drawing themselves on, simple icon reveals, subtle scale shifts. Not 3D spinning globes or tech dashboards.</div></div>
+      <div class="direction-item"><div class="icon">✗</div><div>Default or robotic-sounding AI voices. If using AI narration, the voice must sound natural, warm, and conversational — not polished-announcer, not monotone, not obviously synthetic. Test it: if a viewer would notice it's AI, it's wrong. Slow the pacing, vary the cadence, choose a voice with natural breath and warmth.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- MOTION & PRODUCTION -->
+<div class="section">
+  <div class="section-label">Production Rules</div>
+  <h2>Motion, Sound & Pacing</h2>
+
+  <div class="rule-grid">
+    <div class="rule-card">
+      <h4>Transitions & Effects You Can Use</h4>
+      <p>Cross dissolves for emotional beats. Light leaks and warm light washes between sections — these give energy without being techy. Slow push-ins or pull-outs (Ken Burns) on stills and archival footage. Luma fades (fade through white instead of black — keeps it light). Soft whip pans for pace. Subtle warm glow and bloom on highlights is welcome — keep it soft and golden, not neon. Gentle lens flare in warm tones. Light film grain on archival segments. These are your creative tools. Use them.</p>
+    </div>
+    <div class="rule-card">
+      <h4>Lower Thirds</h4>
+      <p>Urbanist font. Left-aligned. Subtle fade-in, hold, fade-out. Use a coral accent line or pill to tie it to the brand. Keep it minimal — name, title, gone. Don't overthink the animation. It should appear, do its job, and leave without competing with the speaker.</p>
+    </div>
+    <div class="rule-card">
+      <h4>Music</h4>
+      <p>Warm, organic, understated. Acoustic instruments over synths. Think "NPR feature" not "product launch hype reel." Music supports the voice — it never competes with it.</p>
+    </div>
+    <div class="rule-card">
+      <h4>Pacing</h4>
+      <p>Breathe. A 3-minute video with room to think beats an 8-minute video that rushes. Let important lines land. Silence after a strong statement is more powerful than filling every gap.</p>
+    </div>
+    <div class="rule-card">
+      <h4>Text on Screen</h4>
+      <p>Urbanist only. Sentence case (not ALL CAPS unless it's a 2-word label). White or navy on backgrounds. Coral for emphasis or accent words. Keep supers to 6 words max.</p>
+    </div>
+    <div class="rule-card">
+      <h4>Voice</h4>
+      <p>AI narration must sound indistinguishable from a real person. Warm, natural cadence — not a default text-to-speech voice. Adjust speed, tone, and breathing to feel human. When possible, let Paul's own clips carry the story — his real voice is the strongest asset. The AI voice fills gaps, it doesn't replace him.</p>
+    </div>
+    <div class="rule-card">
+      <h4>Showing UI & Websites</h4>
+      <p>Product screenshots and website footage should fill the screen or sit inside a clean device mockup (laptop, phone frame). No floating windows over dark or techy backgrounds. No distortion, tilt, or perspective warp on the screenshot. No glowing borders or neon backdrops behind the browser. The product is the visual — present it clean, well-lit, and at full resolution. If the UI is well-designed, it doesn't need decoration. Let it speak.</p>
+    </div>
+    <div class="rule-card">
+      <h4>People & Photography</h4>
+      <p>Never AI-edit anyone's face or appearance. No smoothing, no wrinkle removal, no enhancement. Use real photos and actual video stills exactly as they are. Never composite a person onto a fake background with floating elements behind them. If introducing someone on screen, use their real footage — a clean still or video clip with a simple lower third. The person is the content, not the backdrop.</p>
+    </div>
+    <div class="rule-card">
+      <h4>Title Cards & Intros</h4>
+      <p>Name + title in Urbanist on a clean background (solid color, subtle gradient, or a single relevant photo). No 3D text, no beveled or embossed lettering, no drop shadows on type, no glow effects. No busy composites with multiple background elements (buildings, DNA, network diagrams, floating icons). One background. One name. One title. Done.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SUB-BRAND NOTE -->
+<div class="section">
+  <div class="section-label">Multi-Brand Note</div>
+  <h2>When a Video Features Sub-Brands</h2>
+  <p>Soar corporate is the parent brand. When showing Citizen Portal, Workplace AI, or Fleet of Agents within a Soar video, use each product's own colors only within their segment — then return to Soar corporate palette. Don't blend palettes across the whole video. Each product gets its moment, then we come home to coral and navy.</p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-note">
+  <strong>SOAR Video Brand Reference</strong> — Created June 2026 by Rachel Alexandria, Creative Director<br>
+  Questions about brand application? Ask Rachel before producing. This document is the standard.
+</div>
+
+</body>
+</html>

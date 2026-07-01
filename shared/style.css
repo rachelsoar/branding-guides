@@ -1,0 +1,218 @@
+/* Soar Brand Guide — Shared Styles */
+/* Used across all brand guide pages on GitHub Pages */
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --soar-coral: #EE785A;
+  --soar-navy: #06091E;
+  --wai-violet: #8100ff;
+  --wai-dark: #01081b;
+  --cp-teal: #1D9E75;
+  --cp-dark: #04342C;
+  --gray-50: #fafaf8;
+  --gray-100: #f0efec;
+  --gray-200: #e0dfdc;
+  --gray-400: #a0a09c;
+  --gray-600: #6b6a65;
+  --gray-800: #3d3d3a;
+  --gray-900: #1a1917;
+  --radius: 16px;
+  --radius-sm: 8px;
+  --max-width: 1100px;
+}
+
+html { background: #ffffff; }
+body {
+  font-family: 'Outfit', system-ui, sans-serif;
+  color: var(--gray-900);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 32px 80px;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--gray-900);
+}
+h1 { font-size: 36px; margin-bottom: 8px; }
+h2 { font-size: 24px; margin: 48px 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--gray-200); }
+h3 { font-size: 18px; margin: 32px 0 12px; font-weight: 600; }
+p { margin-bottom: 16px; color: var(--gray-800); }
+a { color: var(--soar-coral); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Header */
+.site-header {
+  text-align: center;
+  padding: 48px 0 40px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--gray-200);
+}
+.site-header .eyebrow {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--soar-coral);
+  margin-bottom: 12px;
+}
+.site-header p {
+  font-size: 15px;
+  color: var(--gray-600);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Breadcrumb nav */
+.breadcrumb {
+  font-size: 13px;
+  color: var(--gray-400);
+  margin-bottom: 32px;
+}
+.breadcrumb a { color: var(--gray-600); }
+
+/* Brand cards — hub page */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 24px 0;
+}
+.card {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  transition: border-color 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.card:hover { border-color: var(--gray-400); text-decoration: none; }
+.card .card-eyebrow {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.card h3 { margin: 0 0 8px; font-size: 18px; }
+.card p { font-size: 14px; color: var(--gray-600); margin: 0; }
+
+/* Brand accent colors on cards */
+.card--soar .card-eyebrow { color: var(--soar-coral); }
+.card--soar:hover { border-color: var(--soar-coral); }
+.card--wai .card-eyebrow { color: var(--wai-violet); }
+.card--wai:hover { border-color: var(--wai-violet); }
+.card--cp .card-eyebrow { color: var(--cp-teal); }
+.card--cp:hover { border-color: var(--cp-teal); }
+.card--guide .card-eyebrow { color: var(--gray-600); }
+.card--guide:hover { border-color: var(--gray-800); }
+
+/* Updated badge — injected by changelog.js */
+.updated-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--cp-teal);
+  background: #e1f5ee;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.updated-badge .material-symbols-outlined { font-size: 14px; }
+
+/* Section with data-updated */
+section[data-updated].recently-updated {
+  background: linear-gradient(90deg, #e1f5ee22 0%, transparent 60%);
+  border-left: 3px solid var(--cp-teal);
+  padding-left: 20px;
+  margin-left: -23px;
+}
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
+th { text-align: left; font-weight: 600; padding: 10px 12px; border-bottom: 2px solid var(--gray-200); font-family: 'Urbanist', sans-serif; }
+td { padding: 10px 12px; border-bottom: 1px solid var(--gray-100); color: var(--gray-800); }
+tr:last-child td { border-bottom: none; }
+
+/* What's new feed — hub page */
+.changelog-feed { margin: 24px 0; }
+.changelog-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 14px;
+}
+.changelog-item:last-child { border-bottom: none; }
+.changelog-date { color: var(--gray-400); white-space: nowrap; min-width: 80px; }
+.changelog-text { color: var(--gray-800); }
+
+/* Color swatches */
+.swatch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin: 16px 0; }
+.swatch { border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--gray-200); }
+.swatch-color { height: 64px; }
+.swatch-label { padding: 8px 10px; font-size: 12px; }
+.swatch-label strong { display: block; font-weight: 600; margin-bottom: 2px; }
+.swatch-label code { font-size: 11px; color: var(--gray-600); }
+
+/* Placeholder / decision-needed states */
+.decision-needed {
+  background: #fef9f0;
+  border: 1px dashed #e8c36a;
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  margin: 12px 0;
+  font-size: 14px;
+  color: #8a6d2b;
+}
+.decision-needed strong { color: #6b5420; }
+
+/* Material icon inline alignment */
+.material-symbols-outlined {
+  font-size: 18px;
+  vertical-align: -3px;
+  margin-right: 4px;
+}
+
+/* Page meta line */
+.page-meta {
+  font-size: 13px;
+  color: var(--gray-400);
+  margin-bottom: 32px;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid var(--gray-200);
+  font-size: 13px;
+  color: var(--gray-400);
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  body { padding: 24px 16px 48px; }
+  h1 { font-size: 28px; }
+  .card-grid { grid-template-columns: 1fr; }
+  .swatch-grid { grid-template-columns: repeat(2, 1fr); }
+}
