@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Citizen Portal — Social Media & Ad Statics Guide</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../shared/style.css">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  .brand-header { background: linear-gradient(170deg, #eef3fa 0%, #fff 60%); }
+  .brand-header .eyebrow { color: var(--cp-navy); }
+  .section-label { color: var(--cp-navy); }
+  .callout { background: #eef3fa; border-color: var(--cp-navy); }
+  .toc-link:hover { color: var(--cp-navy); border-bottom-color: var(--cp-navy); }
+  a { color: var(--cp-navy); }
+  table.ref { width:100%; border-collapse:collapse; margin-top:16px; font-size:14px; }
+  table.ref th { text-align:left; font-family:'Urbanist',sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--gray-600); padding:8px 12px; border-bottom:2px solid var(--gray-200); }
+  table.ref td { padding:10px 12px; border-bottom:1px solid var(--gray-100); vertical-align:top; }
+  table.ref code { background:var(--gray-50); padding:2px 7px; border-radius:5px; font-size:13px; }
+  .flow { counter-reset: step; margin-top: 20px; }
+  .flow-step { display:grid; grid-template-columns:44px 1fr; gap:16px; padding:18px 0; border-bottom:1px solid var(--gray-100); }
+  .flow-step::before { counter-increment: step; content: counter(step); width:36px; height:36px; border-radius:50%;
+    background:var(--cp-navy); color:#fff; font-family:'Urbanist',sans-serif; font-weight:800; font-size:16px;
+    display:flex; align-items:center; justify-content:center; }
+  .flow-step h4 { font-family:'Urbanist',sans-serif; font-weight:800; margin:6px 0 4px; }
+  .flow-step p { font-size:14px; color:var(--gray-600); margin:0; max-width:640px; }
+  .type-demo { border:1px solid var(--gray-200); border-radius:var(--radius); overflow:hidden; margin-top:16px; }
+  .type-demo .dark { background:linear-gradient(135deg, #78002d 0%, #254887 100%); padding:36px 32px; }
+  .type-demo .light { background:#fff; padding:36px 32px; }
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <a href="../"><span class="material-symbols-outlined">arrow_back</span> Brand Guides</a>
+  <span>/</span> <a href="./">Citizen Portal</a> <span>/</span> Social &amp; Ad Statics
+</div>
+
+<div class="brand-header">
+  <div class="eyebrow">Citizen Portal — Working Guide</div>
+  <h1>Social Media &amp;<br>Ad Statics Guide</h1>
+  <p class="subtitle">How to design any Citizen Portal static — social posts, Meta ad campaign creative, and the video versions that follow. If you're making something a CP audience will see, start here.</p>
+  <p class="page-meta">Last updated: July 2, 2026</p>
+</div>
+
+<div id="page-index"><div class="toc-label">On this page</div></div>
+
+<section data-updated="2026-07-02">
+<div class="section-label">Scope</div>
+<h2>What this guide covers</h2>
+<div class="callout">
+  <h3>One guide, three outputs.</h3>
+  <p><strong>Social media posts</strong> (organic content on CP profiles), <strong>ad statics</strong> (Meta campaign images), and <strong>video versions</strong> (animated adaptations of approved statics, produced at each ad size). The rules below apply to all three — video work inherits every decision made in the approved static it's based on.</p>
+</div>
+<p>For brand fundamentals — full color palette, segment messaging, product features, and websites — see the <a href="./">main CP brand guide</a>. This page covers what you need while actually designing.</p>
+</section>
+
+<section data-updated="2026-07-02">
+<div class="section-label">Workflow</div>
+<h2>The pipeline: static → approval → video</h2>
+<div class="flow">
+  <div class="flow-step"><div><h4>Design the 4:5 master</h4><p>Build in Canva using the colors, typography, and copy rules on this page. Design the <strong>4:5 (1080×1350)</strong> first — that's the version that goes through approval.</p></div></div>
+  <div class="flow-step"><div><h4>Copy check</h4><p>All copy on external-facing creative goes through copy approval before design is finalized. Never invent product claims, statistics, or jurisdiction counts — use only approved copy sources.</p></div></div>
+  <div class="flow-step"><div><h4>Submit for creative approval</h4><p>Send the 4:5 to Creative Direction for approval. Nothing ships — organic or paid — without it. Expect notes; revisions are normal.</p></div></div>
+  <div class="flow-step"><div><h4>Build the remaining sizes</h4><p>Once the 4:5 is approved, adapt it to <strong>1:1</strong> and <strong>9:16</strong> — same copy, colors, and layout logic; don't just crop. The size goes in every filename: <code>cp-static-spendingcallout-4x5-v1.png</code>, <code>-1x1-</code>, <code>-9x16-</code>.</p></div></div>
+  <div class="flow-step"><div><h4>Hand off to video production</h4><p>Approved statics go to the video editor, who produces animated versions at each size. The static is the source of truth — video matches its copy, colors, and layout. Changed copy = back to step 2.</p></div></div>
+  <div class="flow-step"><div><h4>Log it on the tracking sheet</h4><p>Every static gets a row on the <a href="https://docs.google.com/spreadsheets/d/1Dt2-mvvZnQCRAUQxsDgCKBZFG8Lz8tpW1VdlYkgQX7k/edit?gid=264616677#gid=264616677" target="_blank">campaign tracking sheet</a> with a link to its Google Drive file. This is how the team knows what exists and its approval status — an unlogged static doesn't exist.</p></div></div>
+</div>
+</section>
+
+<section data-updated="2026-07-02">
+<div class="section-label">Color</div>
+<h2>Colors for statics</h2>
+<p>Authority and trust without literal red-white-and-blue. The signature move is the maroon-to-blue gradient on dark layouts; yellow is a small-dose accent, never a background.</p>
+<div class="swatch-grid">
+  <div class="swatch"><div class="swatch-color" style="background:#254887;"></div><div class="swatch-label"><strong>Blue (primary)</strong><code>#254887</code></div></div>
+  <div class="swatch"><div class="swatch-color" style="background:#78002d;"></div><div class="swatch-label"><strong>Maroon (accent)</strong><code>#78002d</code></div></div>
+  <div class="swatch"><div class="swatch-color" style="background:#ffd83a;"></div><div class="swatch-label"><strong>Yellow (small accents)</strong><code>#ffd83a</code></div></div>
+  <div class="swatch"><div class="swatch-color" style="background:#0f1d3a;"></div><div class="swatch-label"><strong>Dark navy</strong><code>#0f1d3a</code></div></div>
+  <div class="swatch"><div class="swatch-color" style="background:#eef3fa;"></div><div class="swatch-label"><strong>Light blue bg</strong><code>#eef3fa</code></div></div>
+  <div class="swatch"><div class="swatch-color" style="background:linear-gradient(135deg,#78002d 0%,#254887 100%);"></div><div class="swatch-label"><strong>CP gradient</strong><code>135° maroon→blue</code></div></div>
+</div>
+<div class="callout" style="margin-top:20px;">
+  <h3>Retired colors — do not use</h3>
+  <p>Old maroon <code>#75042f</code> and old yellow <code>#ffbb00</code> are retired. If a Canva file or older asset contains them, update to the current values above.</p>
+</div>
+</section>
+
+<section data-updated="2026-07-02">
+<div class="section-label">Typography</div>
+<h2>Typography for statics</h2>
+<p><strong>Headlines: EB Garamond</strong> (weight 600–700). <strong>Body: Outfit</strong> (weight 300–400). Both are free on Google Fonts and in Canva. The serif carries civic gravitas — public record, carved-in-stone permanence — while Outfit ties CP to the wider product family.</p>
+<div class="type-demo">
+  <div class="light">
+    <div style="font-family:'EB Garamond',serif; font-weight:600; font-size:34px; line-height:1.15; color:#0f1d3a;">Facts, not headlines</div>
+    <div style="font-family:'Outfit',sans-serif; font-weight:400; font-size:16px; color:#4d525f; margin-top:10px;">EB Garamond 600 on light backgrounds. Outfit 300–400 for supporting copy.</div>
+  </div>
+  <div class="dark">
+    <div style="font-family:'EB Garamond',serif; font-weight:700; font-size:34px; line-height:1.15; color:#fff;">Facts, not headlines</div>
+    <div style="font-family:'Outfit',sans-serif; font-weight:300; font-size:16px; color:rgba(255,255,255,0.85); margin-top:10px;">On dark backgrounds and the CP gradient, bump headlines to weight 700.</div>
+  </div>
+</div>
+<table class="ref">
+  <tr><th>Rule</th><th>Why</th></tr>
+  <tr><td>Headline weight 600 minimum, 700 on dark</td><td>EB Garamond goes thin at light weights — it must have presence at phone-screen distance</td></tr>
+  <tr><td>Don't use Poppins or Inter</td><td>Retired fonts from the old brand kit</td></tr>
+  <tr><td>Statics ≠ website</td><td>The website intentionally uses system fonts; this pairing is specifically for ads, statics, and social graphics</td></tr>
+</table>
+</section>
+
+<section data-updated="2026-07-02">
+<div class="section-label">Copy</div>
+<h2>Copy rules — these are hard rules</h2>
+<p>CP is a tool for informed citizens, not an activist brand. Every word stays factual, empowering, and non-partisan. Copy that breaks these rules gets sent back, so check before submitting:</p>
+<div class="compare-grid">
+  <div class="compare-do">
+    <div class="compare-label">Always</div>
+    <div class="compare-text">Say <strong>"constitutional republic"</strong> · write the tagline as <strong>"Facts, not headlines"</strong> (comma required) · lead with data and what the citizen can do with it · use only approved copy sources · keep tone neutral across the political spectrum</div>
+  </div>
+  <div class="compare-dont">
+    <div class="compare-label">Never</div>
+    <div class="compare-text">Say <strong>"democracy"</strong> · say <strong>"unlimited"</strong> in any feature or pricing context · use the <strong>"whether you're ___ or ___"</strong> sentence pattern · use <strong>emojis</strong> (Material Symbols icons only) · invent statistics or jurisdiction counts · oversell features — claims must reflect what the product reliably does today</div>
+  </div>
+</div>
+<div class="callout" style="margin-top:20px;">
+  <h3>Numbers need verification</h3>
+  <p>Any count that appears in creative — jurisdictions covered, meetings processed, articles generated — must come from a verified, approved source. If you can't point to where a number came from, it doesn't go in the design.</p>
+</div>
+</section>
+
+<section data-updated="2026-07-02">
+<div class="section-label">Audience</div>
+<h2>Design for the segment</h2>
+<p>CP speaks to five audiences, each with its own angle and landing page. Before designing, know which segment the piece targets — it changes the headline, the imagery, and the destination link.</p>
+<table class="ref">
+  <tr><th>Segment</th><th>Angle for creative</th></tr>
+  <tr><td>Government</td><td>Constituent engagement and transparency tool</td></tr>
+  <tr><td>Advocacy</td><td>Data-backed accountability and civic action</td></tr>
+  <tr><td>Press</td><td>Verified source for public spending and legislation data</td></tr>
+  <tr><td>Business</td><td>Monitor regulations and government contracts</td></tr>
+  <tr><td>Education</td><td>Civics education with real-world government data</td></tr>
+</table>
+<p style="margin-top:12px;">Segment landing pages are linked on the <a href="./">main CP guide</a> — always confirm the destination URL for an ad before finalizing it.</p>
+</section>
+
+<section data-updated="2026-07-02">
+<div class="section-label">Formats</div>
+<h2>Sizes and export checklist</h2>
+<p>Every ad concept ships as a set of three. The 4:5 is the master and goes through approval; the others are adaptations — don't just crop.</p>
+<table class="ref">
+  <tr><th>Ratio</th><th>Pixels</th><th>Where it runs</th><th>Role</th></tr>
+  <tr><td><strong>4:5</strong></td><td>1080 × 1350</td><td>Meta feed portrait (FB + IG) — best feed performance</td><td><strong>Master — design & approve first</strong></td></tr>
+  <tr><td>1:1</td><td>1080 × 1080</td><td>Meta feed square placements</td><td>Adapt from approved 4:5</td></tr>
+  <tr><td>9:16</td><td>1080 × 1920</td><td>Stories and Reels placements</td><td>Adapt from approved 4:5</td></tr>
+  <tr><td>16:9</td><td>1920 × 1080</td><td>Link cards, YouTube, wide placements</td><td>Only when specifically requested</td></tr>
+</table>
+<div class="rule-grid" style="margin-top:20px;">
+  <div class="rule-card"><h4>Readable at arm's length</h4><p>Headlines must read on a phone held at normal distance. If you have to squint at 25% zoom, the type is too small or too light.</p></div>
+  <div class="rule-card"><h4>Respect the edges</h4><p>Keep logos and key text away from edges — Stories/Reels UI overlays the top and bottom ~250px of 9:16. Center the message.</p></div>
+  <div class="rule-card"><h4>Less text on the image</h4><p>Meta favors low-text images. Put the argument in the caption/primary text; the static carries one headline and one idea.</p></div>
+  <div class="rule-card"><h4>Size goes in every filename</h4><p><code>cp-static-[concept]-4x5-v1.png</code> · <code>cp-static-[concept]-1x1-v1.png</code> · <code>cp-static-[concept]-9x16-v1.png</code> — videos the same: <code>cp-video-[concept]-9x16-v1.mp4</code>. Full rules in the <a href="../guides/naming.html">naming convention</a>.</p></div>
+</div>
+<div class="callout" style="margin-top:20px;">
+  <h3>Where campaign files live</h3>
+  <p>Ad statics, drafts, and campaign videos live in <strong>Google Drive, logged on the tracking sheet</strong> — not in the brand asset library. The asset library is reserved for finalized, reusable brand assets, and Creative Direction decides if a campaign piece gets promoted into it later.</p>
+</div>
+</section>
+
+<section data-updated="2026-07-02">
+<div class="section-label">Organic</div>
+<h2>Organic social posts</h2>
+<p>Same brand rules as ads, lighter process: posts are built from approved templates (see the <a href="../guides/templates.html">template library</a>), follow the <a href="../guides/cadence.html">content cadence</a> — CP posts 3×/week (civic data Tuesday, educational Thursday, segment value prop Saturday) — and every post has a visual. No text-only posts, no freeform design.</p>
+<div class="decision-needed"><strong>TBD:</strong> Platform priority list, content pillars, caption voice examples, and hashtag strategy are not yet established. Until they are: no hashtags, and match caption tone to the copy rules above.</div>
+</section>
+
+<section data-updated="2026-07-02">
+<div class="section-label">Open Items</div>
+<h2>Not yet established</h2>
+<p>These are known gaps, not oversights. When a decision lands, this page updates and the change appears in the hub's "What's new" feed.</p>
+<table class="ref">
+  <tr><th>Item</th><th>Status</th></tr>
+  <tr><td>Photography / imagery direction for statics</td><td>TBD</td></tr>
+  <tr><td>Profile bios</td><td>Pending tagline resolution</td></tr>
+  <tr><td>Hashtag strategy</td><td>TBD — skip hashtags until decided</td></tr>
+  <tr><td>Content pillars and caption examples</td><td>TBD</td></tr>
+  <tr><td>Approved example statics gallery</td><td>Will populate here as campaign creative is approved</td></tr>
+</table>
+</section>
+
+<footer class="site-footer">
+  <a href="./">Back to Citizen Portal guide</a> · <a href="assets.html">CP asset library</a><br>
+  Soar Brand Guides — Maintained by Creative Direction
+</footer>
+
+<script src="../shared/nav.js"></script>
+</body>
+</html>

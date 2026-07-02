@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>File Naming & Asset Library — Soar Brand Guides</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../shared/style.css">
+<style>
+  .brand-header { background: linear-gradient(170deg, #f7f8fa 0%, #fff 60%); }
+  .brand-header .eyebrow { color: var(--gray-600); }
+  .section-label { color: var(--gray-600); }
+  table.ref { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 14px; }
+  table.ref th { text-align: left; font-family: 'Urbanist', sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-600); padding: 8px 12px; border-bottom: 2px solid var(--gray-200); }
+  table.ref td { padding: 10px 12px; border-bottom: 1px solid var(--gray-100); vertical-align: top; }
+  table.ref code { background: var(--gray-50); padding: 2px 7px; border-radius: 5px; font-size: 13px; white-space: nowrap; }
+  .pattern-hero { background: var(--gray-900); color: #fff; border-radius: var(--radius); padding: 28px 32px; margin: 20px 0; font-family: monospace; font-size: 22px; text-align: center; letter-spacing: 0.02em; }
+  .pattern-hero .seg { color: #7ee0a3; }
+  .tree { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 24px 28px; font-family: monospace; font-size: 13px; line-height: 1.9; white-space: pre; overflow-x: auto; margin-top: 16px; }
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <a href="../"><span class="material-symbols-outlined">arrow_back</span> Brand Guides</a>
+  <span>/</span> File Naming & Asset Library
+</div>
+
+<div class="brand-header">
+  <div class="eyebrow">Shared Guide — All Brands</div>
+  <h1>File Naming & Asset Library</h1>
+  <p class="subtitle">How files are named, where they live, and how to find what you need. If you only read one guide, read this one.</p>
+  <p class="page-meta">Last updated: July 2, 2026</p>
+</div>
+
+<div id="page-index"><div class="toc-label">On this page</div></div>
+
+<section data-updated="2026-07-02">
+<div class="section-label">Start Here</div>
+<h2>Finding an asset</h2>
+<div class="callout">
+  <h3>Need a logo, banner, or template right now?</h3>
+  <p>Every approved asset lives in the brand's <strong>Assets page</strong> — preview it, copy its permanent URL, or download it. No hunting through Drive folders. <a href="../soar/assets.html">Soar assets</a> · <a href="../workplace/assets.html">Workplace AI assets</a> · <a href="../citizen-portal/assets.html">Citizen Portal assets</a></p>
+</div>
+<p>Behind those pages: approved files live in Google Shared Drives (one per brand), which auto-sync to a CDN. Every file gets a permanent URL that never breaks — safe to use in websites, emails, and ads.</p>
+<table class="ref">
+  <tr><th>Brand</th><th>Shared Drive</th><th>CDN base URL</th></tr>
+  <tr><td>Soar</td><td>Soar Shared Drive</td><td><code>cdn.soar.com</code></td></tr>
+  <tr><td>Workplace AI</td><td>WAI Shared Drive</td><td><code>cdn.workplace-ai.com</code></td></tr>
+  <tr><td>Citizen Portal</td><td>CP Shared Drive</td><td><code>cdn.citizenportal.ai</code></td></tr>
+</table>
+</section>
+
+<section data-updated="2026-07-02">
+<div class="section-label">Naming</div>
+<h2>The naming pattern</h2>
+<div class="pattern-hero"><span class="seg">brand</span>-<span class="seg">type</span>-<span class="seg">descriptor</span>-<span class="seg">v1</span>.ext</div>
+<div class="compare-grid">
+  <div class="compare-do">
+    <div class="compare-label">Do</div>
+    <div class="compare-text">All lowercase · hyphens between words · brand prefix first (<code>soar-</code>, <code>wai-</code>, <code>cp-</code>) · version last (<code>-v1</code>, <code>-v2</code>) · rename Canva exports immediately</div>
+  </div>
+  <div class="compare-dont">
+    <div class="compare-label">Don't</div>
+    <div class="compare-text">No spaces or special characters · no dates in filenames · never "final", "new", or "FINAL-final-2" · no default Canva export names</div>
+  </div>
+</div>
+<table class="ref">
+  <tr><th>What you're saving</th><th>Name it</th></tr>
+  <tr><td>Soar primary logo</td><td><code>soar-logo-primary-v1.svg</code></td></tr>
+  <tr><td>WAI LinkedIn banner</td><td><code>wai-banner-linkedin-v1.png</code></td></tr>
+  <tr><td>CP floor card for FreedomFest</td><td><code>cp-floorcard-freedomfest-v1.pdf</code></td></tr>
+  <tr><td>WAI Instagram template</td><td><code>wai-template-ig-square-v1.png</code></td></tr>
+  <tr><td>Soar video intro bumper</td><td><code>soar-intro-animated-v1.mp4</code></td></tr>
+  <tr><td>CP ad static (size always in the name — 3-size sets)</td><td><code>cp-static-spendingcallout-4x5-v1.png</code></td></tr>
+  <tr><td>Ryan's headshot</td><td><code>wai-headshot-ryan-v1.jpg</code></td></tr>
+</table>
+<p style="margin-top:14px;">Why versions instead of dates: <code>-v2</code> tells you it replaced v1. A date tells you nothing about which file is current.</p>
+</section>
+
+<section data-updated="2026-07-02">
+<div class="section-label">Organization</div>
+<h2>Folder structure</h2>
+<p>The same structure is mirrored in all three Shared Drives. Organized by <strong>asset type</strong> — how people actually look for files — never by project or department. Two levels deep, no deeper.</p>
+<div class="tree">[Brand Shared Drive]
+├── logos/
+│   ├── primary/        full-color defaults
+│   ├── reversed/       white/light versions for dark backgrounds
+│   ├── lockups/        logo + tagline combinations
+│   └── marks/          icon-only versions
+├── photography/
+│   ├── original/  canva-pro/  unsplash/  openart/  model-releases/
+├── social/
+│   ├── profile-photos/  banners/
+├── print/
+│   ├── one-pagers/  event/  merch/
+├── video/
+│   ├── intros-outros/  thumbnails/  b-roll/
+├── email/
+│   ├── headers/  signatures/
+└── README.md           licensing cheat sheet</div>
+<div class="callout" style="margin-top:20px;">
+  <h3>The two rules that keep this clean</h3>
+  <p><strong>1. Only approved, final files go in.</strong> Drafts and works-in-progress stay out until approved. If it's in the Drive, it's safe to use.<br>
+  <strong>2. Where a photo came from is its folder.</strong> <code>photography/unsplash/</code> means it came from Unsplash — provenance is built into the path, which matters for licensing (below).</p>
+</div>
+</section>
+
+<section data-updated="2026-07-02">
+<div class="section-label">Licensing</div>
+<h2>Can I use this image? (60-second check)</h2>
+<p>Look at the folder the photo lives in — that's your answer:</p>
+<table class="ref">
+  <tr><th>Folder</th><th>Source</th><th>What's allowed</th></tr>
+  <tr><td><code>original/</code></td><td>Shot by our team</td><td>Anything. Full ownership, no restrictions.</td></tr>
+  <tr><td><code>canva-pro/</code></td><td>Canva Pro library</td><td>Commercial use inside designs. Don't publish standalone/unmodified.</td></tr>
+  <tr><td><code>unsplash/</code></td><td>Unsplash</td><td>Commercial OK, no attribution needed. <strong>No recognizable faces in ads</strong> without a verified model release.</td></tr>
+  <tr><td><code>openart/</code></td><td>AI-generated</td><td>Commercial OK. Not copyrightable — we can't stop others reusing it.</td></tr>
+  <tr><td><code>model-releases/</code></td><td>Release PDFs</td><td>Check here before putting any identifiable person in an ad.</td></tr>
+</table>
+<p style="margin-top:14px;"><strong>Canva Pro music:</strong> online ads only. Never TV, radio, podcast, or billboard.</p>
+</section>
+
+<footer class="site-footer">
+  Soar Brand Guides — Maintained by Creative Direction<br>
+  Questions? Reach Rachel in Google Chat.
+</footer>
+
+<script src="../shared/nav.js"></script>
+</body>
+</html>
