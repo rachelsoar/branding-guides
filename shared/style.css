@@ -260,19 +260,31 @@ tr:last-child td { border-bottom: none; }
 .toc-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px 16px;
+  gap: 8px;
 }
 .toc-link {
-  font-size: 14px;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
   color: var(--gray-800);
-  padding: 4px 0;
-  border-bottom: 1px solid transparent;
+  padding: 6px 14px;
+  border: 1px solid var(--gray-200);
+  border-radius: 20px;
+  background: var(--gray-50);
+  transition: border-color 0.15s, color 0.15s;
 }
 .toc-link:hover {
   color: var(--soar-coral);
   text-decoration: none;
-  border-bottom-color: var(--soar-coral);
+  border-color: currentColor;
 }
+.guide-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+  margin: -12px 0 36px;
+}
+@media (max-width: 600px) { .guide-strip { grid-template-columns: 1fr; } }
 /* ── COLLAPSIBLE SECTIONS ── */
 section.collapsible > *:not(h2) {
   max-height: 0;
